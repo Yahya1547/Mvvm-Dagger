@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="40dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNameProduct"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:contentPadding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    style="@style/TextAppearance.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="@font/font"
+                    android:text="Baju Kaos Pria Tee T-Shirt"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_baseline_info_24" />
+
+                <TextView
+                    android:id="@+id/tvPrice"
+                    style="@style/TextAppearance.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvProductName"
+                    android:layout_alignParentLeft="true"
+                    android:text="Rp55.000"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/tvSeen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvPrice"
+                    android:text="Dilihat 37 kali" />
+
+                <ImageView
+                    android:id="@+id/ivDisediakanBlibli"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/tvSeen"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/disediakanblibli" />
+
+                <TextView
+                    android:id="@+id/tvNeedDocument"
+                    style="@style/TextAppearance.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivDisediakanBlibli"
+                    android:text="Butuh dokumen tambahan"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDescriptionNeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvNeedDocument"
+                    android:text="Kamu perlu upload dokumen berikut di halaman Checkout untuk membeli produk ini:"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:id="@+id/containerResepDokter"
+                    android:layout_below="@+id/tvDescriptionNeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/tvCircle"
+                        android:src="@drawable/ic_baseline_circle_24"
+                        android:layout_centerVertical="true"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvResepDokter"
+                        style="@style/TextAppearance.Body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tvCircle"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_centerVertical="true"
+                        android:text="Resep Dokter" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/containerKTP"
+                    android:layout_below="@+id/containerResepDokter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@id/tvCircle"
+                        android:src="@drawable/ic_baseline_circle_24"
+                        android:layout_centerVertical="true"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvKTP"
+                        style="@style/TextAppearance.Body"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tvCircle"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KTP" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDescription"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardNameProduct"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:contentPadding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvDescriptionProduct"
+                    style="@style/TextAppearance.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deskripsi Produk"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvMerek"
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDescriptionProduct"
+                    android:layout_marginVertical="4dp"
+                    android:text="Merek: " />
+
+                <TextView
+                    android:id="@+id/tvProductMerek"
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDescriptionProduct"
+                    android:layout_alignBaseline="@+id/tvMerek"
+                    android:layout_toRightOf="@+id/tvMerek"
+                    android:text="Ricola"
+                    android:textColor="@color/blue" />
+
+                <RelativeLayout
+                    android:id="@+id/containerRetur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvMerek">
+
+                    <ImageView
+                        android:id="@+id/icCheck"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_check_circle_24" />
+
+                    <TextView
+                        android:id="@+id/tvRetur"
+                        style="@style/TextAppearance.Body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_toRightOf="@+id/icCheck"
+                        android:text="15 hari retur"
+                        android:textColor="@color/blue" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/containerCOD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/containerRetur">
+
+                    <ImageView
+                        android:id="@id/icCheck"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_check_circle_24" />
+
+                    <TextView
+                        android:id="@+id/tvCOD"
+                        style="@style/TextAppearance.Body"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_toRightOf="@id/icCheck"
+                        android:text="Bayar di tempat (COD)"
+                        android:textColor="@color/blue" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvSelengkapnya"
+                    style="@style/TextAppearance.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/containerCOD"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="Selengkapnya"
+                    android:textColor="@color/blue"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCicilan"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardDescription"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:contentPadding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivCreditCard"
+                    android:src="@drawable/ic_baseline_credit_card_24"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    style="@style/TextAppearance.Title"
+                    android:layout_toEndOf="@id/ivCreditCard"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cicilan Tanpa Kartu Kredit" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardToko"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardCicilan"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:contentPadding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ic_profile_toko"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_baseline_android_24" />
+
+                <TextView
+                    android:id="@+id/tvNamaToko"
+                    style="@style/TextAppearance.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/ic_profile_toko"
+                    android:text="Blibli" />
+
+                <ImageView
+                    android:id="@+id/ivLocation"
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    android:layout_below="@id/tvNamaToko"
+                    android:layout_marginStart="8dp"
+                    android:layout_toRightOf="@id/ic_profile_toko"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"/>
+
+                <TextView
+                    android:id="@+id/tvTempat"
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_below="@+id/tvNamaToko"
+                    android:layout_toRightOf="@+id/ivLocation"
+                    android:text="Jabodetabek"
+                    android:textColor="@color/blue" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardPengiriman"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardToko"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:contentPadding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icShipping"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_baseline_local_shipping_24" />
+
+                <ImageView
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"/>
+
+                <TextView
+                    android:id="@+id/tvPengiriman"
+                    style="@style/TextAppearance.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_toRightOf="@+id/icShipping"
+                    android:text="Pengiriman cepat ke lokasimu" />
+
+                <TextView
+                    android:id="@+id/tvPotongan"
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_below="@+id/tvPengiriman"
+                    android:layout_toRightOf="@+id/icShipping"
+                    android:text="Potongan pengiriman ke semua tujuan"
+                    android:textColor="@color/green_background" />
+
+                <ImageView
+                    android:id="@+id/ivGrabLogo"
+                    android:src="@drawable/grab_logo"
+                    android:layout_below="@id/tvPotongan"
+                    android:layout_alignStart="@id/tvPotongan"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"/>
+
+                <ImageView
+                    android:id="@+id/ivGosend"
+                    android:src="@drawable/gosend_logo"
+                    android:layout_toRightOf="@id/ivGrabLogo"
+                    android:layout_below="@id/tvPotongan"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvUlasan"
+            style="@style/TextAppearance.Heading"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardPengiriman"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Ulasan" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardUlasan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUlasan"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:contentPadding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Belum ada ulasan." />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tvDiskusi"
+            style="@style/TextAppearance.Heading"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardUlasan"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Diskusi Produk" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDiskusi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDiskusi"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:contentPadding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTanya"
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="Mau tanya mengenai pengiriman, promo, atau lainnya?"
+                    android:textColor="@color/grey" />
+
+                <TextView
+                    android:id="@+id/tvChatCustomerCare"
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTanya"
+                    android:text="Chat customer care"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvAtauHubungi"
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTanya"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_toRightOf="@id/tvChatCustomerCare"
+                    android:text="atau hubungi"
+                    android:textColor="@color/grey" />
+
+                <TextView
+                    android:id="@+id/tvPhoneNumber"
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvTanya"
+                    android:layout_toRightOf="@id/tvAtauHubungi"
+                    android:text="08041 871 871"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/btnTanyaProduk"
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvChatCustomerCare"
+                    android:layout_marginVertical="12dp"
+                    android:background="@drawable/border"
+                    android:text="Tanya tentang produk ini"
+                    android:textAlignment="center"
+                    android:textColor="@color/blue" />
+
+                <TextView
+                    android:id="@+id/tvBelumAdaPertanyaan"
+                    style="@style/TextAppearance.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnTanyaProduk"
+                    android:layout_centerHorizontal="true"
+                    android:text="Belum ada pertanyaan untuk produk ini"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/TextAppearance.Body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBelumAdaPertanyaan"
+                    android:layout_centerHorizontal="true"
+                    android:paddingHorizontal="8dp"
+                    android:text="Jangan sungkan untuk bertanya. Kami akan menjawab pertanyaanmu secepatnya!"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

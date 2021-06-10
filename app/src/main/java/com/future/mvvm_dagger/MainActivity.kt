@@ -66,9 +66,10 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.btnLogin.setOnClickListener {
-            if (isFormFilledCorrectly()) {
-                login()
-            }
+//            if (isFormFilledCorrectly()) {
+//                login()
+//            }
+            openActivityHome()
         }
 
         binding.tvRegister.setOnClickListener {

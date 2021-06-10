@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:iconTint="@color/grey"
+        app:actionLayout="@layout/action_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search"
+        android:contentDescription="This is search action"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/favorite"
+        app:actionLayout="@layout/action_favorite"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:iconTint="@color/grey"
+        android:title="Favorite"
+        android:contentDescription="This is favorite action"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/more"
+        app:actionLayout="@layout/action_share"
+        android:icon="@drawable/ic_baseline_share_24"
+        android:iconTint="@color/grey"
+        android:title="Share"
+        android:contentDescription="This is share action"
+        app:showAsAction="ifRoom" />
+
+</menu>
