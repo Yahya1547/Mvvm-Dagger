@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.Toolbar
+import androidx.cardview.widget.CardView
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.tabs.TabLayout
@@ -19,6 +20,7 @@ class HomeActivity : AppCompatActivity() {
         val collapsingToolbar = findViewById<CollapsingToolbarLayout>(R.id.collapsingToolbar)
 
         val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
+        val iconFavorite = findViewById<CardView>(R.id.ic_favorite)
 
 //        setSupportActionBar(toolbar)
 //        supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -27,9 +29,11 @@ class HomeActivity : AppCompatActivity() {
             if(abs(verticalOffset) >= appbar.totalScrollRange){
                 collapsingToolbar.title = "Baju Kaos Pria Tee T-Shirt"
                 tabLayout.visibility = View.VISIBLE
+                iconFavorite.visibility = View.GONE
             }else{
                 collapsingToolbar.title = ""
                 tabLayout.visibility = View.GONE
+                iconFavorite.visibility = View.VISIBLE
             }
         })
     }

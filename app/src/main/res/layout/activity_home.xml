@@ -30,6 +30,29 @@
                 app:navigationIconTint="@color/grey"
                 app:layout_collapseMode="pin" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ic_favorite"
+                    app:cardCornerRadius="24dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:elevation="8dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:src="@drawable/ic_baseline_favorite_24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:tint="@color/grey" />
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
         <com.google.android.material.tabs.TabLayout
@@ -41,6 +64,7 @@
             app:tabSelectedTextColor="@color/blue"
             app:tabIndicatorColor="@color/blue"
             app:tabIndicatorFullWidth="false"
+            app:tabTextAppearance="@style/MyCustomTextAppearance"
             app:tabMode="scrollable">
 
             <com.google.android.material.tabs.TabItem
